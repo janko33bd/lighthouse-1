@@ -1,11 +1,11 @@
-Lighthouse
+BlackLight
 ==========
 
-Lighthouse is a bitcoin cash compatible fork of Mike Hearn's [Lighthouse project](https://github.com/vinumeris/lighthouse) 
+BlackLight is a blackcoin compatible fork of Mike Hearn's [Lighthouse project](https://github.com/vinumeris/lighthouse) 
 
 
 It is a decentralised, peer to peer crowdfunding application that uses the smart contracts features of the
-Bitcoin protocol. It lets you create projects and pledge to those projects.
+Blackcoin protocol. It lets you create projects and pledge to those projects.
 
 # project status - WIP
 
