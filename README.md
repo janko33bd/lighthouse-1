@@ -14,10 +14,10 @@ create and complete projects using the client.  Currently a fully funded project
 server running.  We hope to have this service up and running ASAP.
 
 This is project is now considered maintained again. However it was primarily updated as a proof of concept for it's main dependency
-[bitcoinj.cash](http://bitcoinj.cash) and as such no significant new development is currently planned beyond building a deploying a
+mia and as such no significant new development is currently planned beyond building a deploying a
 working lighthouse server and cleaning up the build process to make it seamless.
 
-If you would like to contribute to the project please get in touch on the bitcoinj.cash [mailing list](https://groups.google.com/forum/#!forum/bitcoinj-cash)
+If you would like to contribute to the project please get in touch on gitter.
 
 # how to tweak the user interface
 
@@ -49,30 +49,3 @@ the original.
 
 Thus to avoid confusion if you'd like to distribute a version of the project that doesn't match the upstream sources, 
 please invent a new name and logo for it first. Thanks.
-
-# building from source
-
-Building Lighthouse from source requires the [Maven](http://maven.apache.org/) build tool and the [bitcoinj.cash](http://bitcoinj.cash/) library.
-
-Compile Lighthouse with:
-
-```
-$ https://github.com/bitcoinj-cash/lighthouse
-$ cd lighthouse
-$ mvn clean package
-```
-This will pull the latest version of bitcoinj.cash as a dependency from the Maven central repo.
-
-Alternatively the latest version of bitcoinj.cash can be [installed from source](https://github.com/bitcoinj-cash/bitcoinj):
-
-```
-$ git clone https://github.com/bitcoinj-cash/bitcoinj
-$ cd bitcoinj-cash
-$ mvn clean install
-```
-
-Run Lighthouse with:
-
-```
-$ java -jar client/target/shaded.jar
-```
