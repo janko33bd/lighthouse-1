@@ -59,7 +59,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Bitcoin P2P network returned inconsistent answers, please contact support"
+"Blackcoin P2P network returned inconsistent answers, please contact support"
 msgstr ""
 
 msgid "Server error: Timed out"
@@ -162,15 +162,15 @@ msgstr ""
 msgid "This application is already running and cannot be started twice."
 msgstr ""
 
-msgid "Local Bitcoin node not usable"
+msgid "Local Blackcoin node not usable"
 msgstr ""
 
 #. TRANS: %s = app name
 msgid ""
-"You have a Bitcoin (Core) node running on your computer, but it doesn't have "
+"You have a Blackcoin (Core) node running on your computer, but it doesn't have "
 "the protocol support %s needs. %s will still work but will use the peer to "
 "peer network instead, so you won't get upgraded security. Try installing "
-"Bitcoin XT, which is a modified version of Bitcoin Core that has the "
+"Blackcoin XT, which is a modified version of Blackcoin Core that has the "
 "upgraded protocol support."
 msgstr ""
 
@@ -223,7 +223,7 @@ msgstr ""
 
 #. TRANS: %d = maximum number of pledges
 msgid ""
-"You can collect a maximum of %d pledges, due to limits in the Bitcoin "
+"You can collect a maximum of %d pledges, due to limits in the Blackcoin "
 "protocol."
 msgstr ""
 
@@ -395,7 +395,7 @@ msgid "Wallet restore in progress"
 msgstr ""
 
 msgid ""
-"Your wallet will now be resynced from the Bitcoin network. This can take a "
+"Your wallet will now be resynced from the Blackcoin network. This can take a "
 "long time for old wallets."
 msgstr ""
 
@@ -487,7 +487,7 @@ msgstr ""
 
 msgid ""
 "This operation incurs a small miners fee because it requires making a "
-"Bitcoin transaction."
+"Blackcoin transaction."
 msgstr ""
 
 msgid "Revoke pledge"
@@ -514,7 +514,7 @@ msgid "Transaction acceptance issue"
 msgstr ""
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the claim: %s"
+msgid "The Blackcoin network has rejected the claim: %s"
 msgstr ""
 
 msgid "Too much money"
@@ -532,19 +532,19 @@ msgid "Cannot claim pledges"
 msgstr ""
 
 msgid ""
-"Closing the contract requires paying Bitcoin network fees, but you don't "
+"Closing the contract requires paying Blackcoin network fees, but you don't "
 "have enough money in the wallet. Add more money and try again."
 msgstr ""
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the revocation transaction: %s"
+msgid "The Blackcoin network has rejected the revocation transaction: %s"
 msgstr ""
 
 msgid "Cannot revoke pledge"
 msgstr ""
 
 msgid ""
-"Revoking a pledge requires making another Bitcoin transaction on the block "
+"Revoking a pledge requires making another Blackcoin transaction on the block "
 "chain, but you don't have sufficient funds to pay the required fee. Add more "
 "money and try again."
 msgstr ""
@@ -705,7 +705,7 @@ msgstr ""
 msgid "You can also drop an existing project file here."
 msgstr ""
 
-msgid "Select a bitcoin project file to import"
+msgid "Select a blackcoin project file to import"
 msgstr ""
 
 msgid "Project/contract files"
@@ -752,10 +752,10 @@ msgid ""
 "update: %s"
 msgstr ""
 
-msgid "Synchronising with the Bitcoin network"
+msgid "Synchronising with the Blackcoin network"
 msgstr ""
 
-msgid "You don't have any bitcoins in this wallet"
+msgid "You don't have any blackcoins in this wallet"
 msgstr ""
 
 msgid "Send some money to this address first"

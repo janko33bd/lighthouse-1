@@ -284,7 +284,7 @@ public class ProjectActivity extends HBox implements Activity {
             if (status.getError() instanceof FileNotFoundException)
                 msg = tr("Project is not on the server yet: email the project file to the operator");
             else if (status.getError() instanceof Ex.InconsistentUTXOAnswers)
-                msg = tr("Bitcoin P2P network returned inconsistent answers, please contact support");
+                msg = tr("Blackcoin P2P network returned inconsistent answers, please contact support");
             else if (status.getError() instanceof TimeoutException)
                 msg = tr("Server error: Timed out");
             else //noinspection ConstantConditions

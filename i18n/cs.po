@@ -61,8 +61,8 @@ msgid ""
 msgstr "Projekt zatím není na serveru. Pošlete prosím soubor projektu emailem provozovateli serveru."
 
 msgid ""
-"Bitcoin P2P network returned inconsistent answers, please contact support"
-msgstr "P2P síť Bitcoin vrátila protichůdné odpovědi, obraťte se prosím na technickou podporu"
+"Blackcoin P2P network returned inconsistent answers, please contact support"
+msgstr "P2P síť Blackcoin vrátila protichůdné odpovědi, obraťte se prosím na technickou podporu"
 
 msgid "Server error: Timed out"
 msgstr "Chyba serveru: příliš dlouho neodpovídá"
@@ -131,7 +131,7 @@ msgstr "Exportování se nezdařilo"
 
 #. TRANS: %s = error message
 msgid "Lighthouse was unable to save pledge data to the selected file: %s"
-msgstr "Lighthouse nedokázal uložit data příslibu do zvoleného souboru: %s"
+msgstr "Pharos nedokázal uložit data příslibu do zvoleného souboru: %s"
 
 msgid "Read more ..."
 msgstr "Více..."
@@ -164,17 +164,17 @@ msgstr "Aplikace již běží"
 msgid "This application is already running and cannot be started twice."
 msgstr "Tato aplikace již na vašem počítači jednou běží, a nelze ji spustit dvakrát."
 
-msgid "Local Bitcoin node not usable"
-msgstr "Lokální Bitcoinový software je nepoužitelný"
+msgid "Local Blackcoin node not usable"
+msgstr "Lokální Blackcoinový software je nepoužitelný"
 
 #. TRANS: %s = app name
 msgid ""
-"You have a Bitcoin (Core) node running on your computer, but it doesn't have"
+"You have a Blackcoin (Core) node running on your computer, but it doesn't have"
 " the protocol support %s needs. %s will still work but will use the peer to "
 "peer network instead, so you won't get upgraded security. Try installing "
-"Bitcoin XT, which is a modified version of Bitcoin Core that has the "
+"Blackcoin Lore, which is a modified version of Blackcoin Core that has the "
 "upgraded protocol support."
-msgstr "Na vašem počítači běží jádro Bitcoin, nepodporuje ale protokol, který %s potřebuje. %s bude fungovat i tak, ale bude se muset spoléhat na P2P síť, a přijdete tak o vyšší úroveň zabezpečení. Zkuste nainstalovat Bitcoin XT, což je upravená verze jádra Bitcoin, která podporuje potřebný protokol."
+msgstr "Na vašem počítači běží jádro Blackcoin, nepodporuje ale protokol, který %s potřebuje. %s bude fungovat i tak, ale bude se muset spoléhat na P2P síť, a přijdete tak o vyšší úroveň zabezpečení. Zkuste nainstalovat Blackcoin Lore, což je upravená verze jádra Blackcoin, která podporuje potřebný protokol."
 
 msgid "View pledge"
 msgstr "Zobrazení příslibu"
@@ -225,9 +225,9 @@ msgstr "Editovat projekt"
 
 #. TRANS: %d = maximum number of pledges
 msgid ""
-"You can collect a maximum of %d pledges, due to limits in the Bitcoin "
+"You can collect a maximum of %d pledges, due to limits in the Blackcoin "
 "protocol."
-msgstr "Kvůli omezením protokolu Bitcoin můžete posbírat nejvýše %d příslibů."
+msgstr "Kvůli omezením protokolu Blackcoin můžete posbírat nejvýše %d příslibů."
 
 msgid "Project name"
 msgstr "Název"
@@ -397,9 +397,9 @@ msgid "Wallet restore in progress"
 msgstr "Probíhá obnovování peněženky"
 
 msgid ""
-"Your wallet will now be resynced from the Bitcoin network. This can take a "
+"Your wallet will now be resynced from the Blackcoin network. This can take a "
 "long time for old wallets."
-msgstr "Vaše peněženka bude nyní znovu synchronizována se sítí Bitcoin. Pokud je peněženka hodně stará, může to nějakou dobu trvat."
+msgstr "Vaše peněženka bude nyní znovu synchronizována se sítí Blackcoin. Pokud je peněženka hodně stará, může to nějakou dobu trvat."
 
 msgid "Wallet decrypted"
 msgstr "Peněženka dešifrována"
@@ -489,8 +489,8 @@ msgstr "Heslo můžete kdykoli zase odstranit v okně Nastavení peněženky."
 
 msgid ""
 "This operation incurs a small miners fee because it requires making a "
-"Bitcoin transaction."
-msgstr "Tato operace vyžaduje provedení Bitcoinové transakce, a je proto třeba zaplatit malý poplatek minerům, kteří ji zpracují."
+"Blackcoin transaction."
+msgstr "Tato operace vyžaduje provedení Blackcoinové transakce, a je proto třeba zaplatit malý poplatek minerům, kteří ji zpracují."
 
 msgid "Revoke pledge"
 msgstr "Odvolat příslib"
@@ -516,8 +516,8 @@ msgid "Transaction acceptance issue"
 msgstr "Problém s přijetím transakce"
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the claim: %s"
-msgstr "Síť Bitcoin odmítla přijmout transakci výběru: %s"
+msgid "The Blackcoin network has rejected the claim: %s"
+msgstr "Síť Blackcoin odmítla přijmout transakci výběru: %s"
 
 msgid "Too much money"
 msgstr "Příliš mnoho peněz"
@@ -534,22 +534,22 @@ msgid "Cannot claim pledges"
 msgstr "Nelze vybrat přísliby"
 
 msgid ""
-"Closing the contract requires paying Bitcoin network fees, but you don't "
+"Closing the contract requires paying Blackcoin network fees, but you don't "
 "have enough money in the wallet. Add more money and try again."
-msgstr "K vyslání této transakce do sítě Bitcoin je třeba zaplatit poplatek minerům, a ve vaší peněžence na to není potřebná částka. Převeďte si prosím nějaké Bitcoiny do této peněženky a zkuste to znovu."
+msgstr "K vyslání této transakce do sítě Blackcoin je třeba zaplatit poplatek minerům, a ve vaší peněžence na to není potřebná částka. Převeďte si prosím nějaké Blackcoiny do této peněženky a zkuste to znovu."
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the revocation transaction: %s"
-msgstr "Síť Bitcoin odmítla přijmout transakci odvolání: %s"
+msgid "The Blackcoin network has rejected the revocation transaction: %s"
+msgstr "Síť Blackcoin odmítla přijmout transakci odvolání: %s"
 
 msgid "Cannot revoke pledge"
 msgstr "Nelze odvolat příslib"
 
 msgid ""
-"Revoking a pledge requires making another Bitcoin transaction on the block "
+"Revoking a pledge requires making another Blackcoin transaction on the block "
 "chain, but you don't have sufficient funds to pay the required fee. Add more"
 " money and try again."
-msgstr "Odvolání příslibu vyžaduje vložení nové transakce do sítě Bitcoin, nyní však nemáte v peněžence dost peněz ani na zaplacení poplatku za vložení. Přidejte více peněz a zkuste to znovu."
+msgstr "Odvolání příslibu vyžaduje vložení nové transakce do sítě Blackcoin, nyní však nemáte v peněžence dost peněz ani na zaplacení poplatku za vložení. Přidejte více peněz a zkuste to znovu."
 
 msgid "Drag to a folder, email or chat window. Or ..."
 msgstr "Toto můžete přetáhnout do adresáře, emailu, nebo..."
@@ -703,7 +703,7 @@ msgstr "Importovat projekt"
 msgid "You can also drop an existing project file here."
 msgstr "Můžete sem také přetáhnout soubor projektu."
 
-msgid "Select a bitcoin project file to import"
+msgid "Select a blackcoin project file to import"
 msgstr "Zvolte soubor projektu, který chcete importovat"
 
 msgid "Project/contract files"
@@ -750,11 +750,11 @@ msgid ""
 "update: %s"
 msgstr "Při pokusu stáhnout a nainstalovat aktualizaci došlo k chybě: %s"
 
-msgid "Synchronising with the Bitcoin network"
-msgstr "Synchronizuji data se sítí Bitcoin"
+msgid "Synchronising with the Blackcoin network"
+msgstr "Synchronizuji data se sítí Blackcoin"
 
-msgid "You don't have any bitcoins in this wallet"
-msgstr "Nemáte žádné bitcoiny ve své peněžence"
+msgid "You don't have any blackcoins in this wallet"
+msgstr "Nemáte žádné blackcoiny ve své peněžence"
 
 msgid "Send some money to this address first"
 msgstr "Pošlete si prosím nějaké peníze na tuto adresu"

@@ -60,8 +60,8 @@ msgid ""
 msgstr "O projeto ainda não está no servidor: envie por e-mail o arquivo de projeto para o operador"
 
 msgid ""
-"Bitcoin P2P network returned inconsistent answers, please contact support"
-msgstr "A rede P2P do Bitcoin retornou respostas inconsistentes, por favor entre em contato com o suporte"
+"Blackcoin P2P network returned inconsistent answers, please contact support"
+msgstr "A rede P2P do Blackcoin retornou respostas inconsistentes, por favor entre em contato com o suporte"
 
 msgid "Server error: Timed out"
 msgstr "Erro no servidor: Tempo esgotado"
@@ -163,17 +163,17 @@ msgstr "Já em execução"
 msgid "This application is already running and cannot be started twice."
 msgstr "Esse aplicativo já está em execução e não pode ser iniciado duas vezes."
 
-msgid "Local Bitcoin node not usable"
-msgstr "Nodo local de Bitcoin não utilizável"
+msgid "Local Blackcoin node not usable"
+msgstr "Nodo local de Blackcoin não utilizável"
 
 #. TRANS: %s = app name
 msgid ""
-"You have a Bitcoin (Core) node running on your computer, but it doesn't have"
+"You have a Blackcoin (Core) node running on your computer, but it doesn't have"
 " the protocol support %s needs. %s will still work but will use the peer to "
 "peer network instead, so you won't get upgraded security. Try installing "
-"Bitcoin XT, which is a modified version of Bitcoin Core that has the "
+"Blackcoin XT, which is a modified version of Blackcoin Core that has the "
 "upgraded protocol support."
-msgstr "Você possui um nodo de Bitcoin (Core) sendo executado em seu computador, mas ele não tem as necessidades do procolo de suporte %s. %s ainda pode funcionar, mas você irá usar a rede P2P, então você não terá uma segurança aprimorada. Tente instalar o Bitcoin XT, que é uma versão modificada do Bitcoin Core que tem um protocolo de suporte aprimorado."
+msgstr "Você possui um nodo de Blackcoin (Lore) sendo executado em seu computador, mas ele não tem as necessidades do procolo de suporte %s. %s ainda pode funcionar, mas você irá usar a rede P2P, então você não terá uma segurança aprimorada. Tente instalar o Blackcoin Lore, que é uma versão modificada do Blackcoin que tem um protocolo de suporte aprimorado."
 
 msgid "View pledge"
 msgstr "Ver apoio"
@@ -224,9 +224,9 @@ msgstr "Editar projeto"
 
 #. TRANS: %d = maximum number of pledges
 msgid ""
-"You can collect a maximum of %d pledges, due to limits in the Bitcoin "
+"You can collect a maximum of %d pledges, due to limits in the Blackcoin "
 "protocol."
-msgstr "Você pode coletar no máximo %d apoios, devido a limites no protocolo Bitcoin."
+msgstr "Você pode coletar no máximo %d apoios, devido a limites no protocolo Blackcoin."
 
 msgid "Project name"
 msgstr "Nome do projeto"
@@ -396,9 +396,9 @@ msgid "Wallet restore in progress"
 msgstr "Recuperação da carteira em andamento"
 
 msgid ""
-"Your wallet will now be resynced from the Bitcoin network. This can take a "
+"Your wallet will now be resynced from the Blackcoin network. This can take a "
 "long time for old wallets."
-msgstr "Sua carteira será agora resincronizada a partir da rede Bitcoin. Isso pode demorar bastante para carteiras antigas."
+msgstr "Sua carteira será agora resincronizada a partir da rede Blackcoin. Isso pode demorar bastante para carteiras antigas."
 
 msgid "Wallet decrypted"
 msgstr "Carteira descriptada"
@@ -488,8 +488,8 @@ msgstr "Você pode remover a senha a qualquer hora na tela das configurações."
 
 msgid ""
 "This operation incurs a small miners fee because it requires making a "
-"Bitcoin transaction."
-msgstr "Essa operação exige uma pequena taxa para mineradores porque ela requer a realização de uma transação Bitcoin."
+"Blackcoin transaction."
+msgstr "Essa operação exige uma pequena taxa para mineradores porque ela requer a realização de uma transação Blackcoin."
 
 msgid "Revoke pledge"
 msgstr "Revogar apoio"
@@ -515,8 +515,8 @@ msgid "Transaction acceptance issue"
 msgstr "Erro na aceitação da transação"
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the claim: %s"
-msgstr "A rede bitcoin rejeitou a reivindicação: %s"
+msgid "The Blackcoin network has rejected the claim: %s"
+msgstr "A rede blackcoin rejeitou a reivindicação: %s"
 
 msgid "Too much money"
 msgstr "Dinheiro demais"
@@ -533,22 +533,22 @@ msgid "Cannot claim pledges"
 msgstr "Não foi possível reivindicar os apoios."
 
 msgid ""
-"Closing the contract requires paying Bitcoin network fees, but you don't "
+"Closing the contract requires paying Blackcoin network fees, but you don't "
 "have enough money in the wallet. Add more money and try again."
-msgstr "O fechamento do contrato requer o pagamento de taxas à rede Bitcoin, mas você não tem dinheiro suficiente na carteira. Adicione mais dinheiro e tente novamente."
+msgstr "O fechamento do contrato requer o pagamento de taxas à rede Blackcoin, mas você não tem dinheiro suficiente na carteira. Adicione mais dinheiro e tente novamente."
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the revocation transaction: %s"
-msgstr "A rede Bitcoin rejeitou a revogação da transação: %s"
+msgid "The Blackcoin network has rejected the revocation transaction: %s"
+msgstr "A rede Blackcoin rejeitou a revogação da transação: %s"
 
 msgid "Cannot revoke pledge"
 msgstr "Não foi possível revogar o apoio"
 
 msgid ""
-"Revoking a pledge requires making another Bitcoin transaction on the block "
+"Revoking a pledge requires making another Blackcoin transaction on the block "
 "chain, but you don't have sufficient funds to pay the required fee. Add more"
 " money and try again."
-msgstr "Revogar um apoio exige a realização de uma transação Bitcoin na block chain, mas você não tem saldo suficiente para pagar a taxa de transação necessária. Deposite mais dinheiro e tente novamente."
+msgstr "Revogar um apoio exige a realização de uma transação Blackcoin na block chain, mas você não tem saldo suficiente para pagar a taxa de transação necessária. Deposite mais dinheiro e tente novamente."
 
 msgid "Drag to a folder, email or chat window. Or ..."
 msgstr "Arraste uma pasta, e-mail ou janela de chat. Ou ..."
@@ -702,8 +702,8 @@ msgstr "Importar projeto"
 msgid "You can also drop an existing project file here."
 msgstr "Você também pode arrastar um projeto existente aqui."
 
-msgid "Select a bitcoin project file to import"
-msgstr "Selecione um arquivo de projeto bitcoin para importar"
+msgid "Select a blackcoin project file to import"
+msgstr "Selecione um arquivo de projeto blackcoin para importar"
 
 msgid "Project/contract files"
 msgstr "Arquivos de projeto/contrato"
@@ -749,11 +749,11 @@ msgid ""
 "update: %s"
 msgstr "Ocorreu um erro ao tentar baixar ou aplicar uma atualização online: %s"
 
-msgid "Synchronising with the Bitcoin network"
-msgstr "Sincronizando com a rede Bitcoin"
+msgid "Synchronising with the Blackcoin network"
+msgstr "Sincronizando com a rede Blackcoin"
 
-msgid "You don't have any bitcoins in this wallet"
-msgstr "Você não tem bitcoins nessa carteira"
+msgid "You don't have any blackcoins in this wallet"
+msgstr "Você não tem blackcoins nessa carteira"
 
 msgid "Send some money to this address first"
 msgstr "Envia algum dinheiro para esse endereço antes"

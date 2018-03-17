@@ -113,7 +113,7 @@ public class ProjectOverviewWidget extends HBox {
             Tooltip tooltip = new Tooltip();
             // TODO: Maybe use Adam's BtcFormat class here instead.
             // TRANS: %s = amount in BTC
-            tooltip.textProperty().bind(new ReactiveCoinFormatter(tr("%s BTC raised so far"), MonetaryFormat.BTC, pledgedAmount));
+            tooltip.textProperty().bind(new ReactiveCoinFormatter(tr("%s BLK raised so far"), MonetaryFormat.BTC, pledgedAmount));
             Tooltip.install(progressCircle, tooltip);
 
             Tooltip tt = new Tooltip(tr("You created this project"));

@@ -56,7 +56,7 @@ public class Main extends Application {
     public static final Logger log = LoggerFactory.getLogger(Main.class);
 
     // This is not translated as it's used for directory paths and other system strings.
-    public static final String APP_NAME = "Crowdfunding App";
+    public static final String APP_NAME = "BlackLight";
 
     // UpdateFX stuff. Version is incremented monotonically after a new version is released.
     public static final int VERSION = 30;
@@ -162,7 +162,7 @@ public class Main extends Application {
         firstRun = !prefs.getPrefsFileFound();
         initGUI(stage);
 
-        if (firstRun && params != RegTestParams.get() && updatesURL != null) {
+        if (firstRun && updatesURL != null) {
             // We haven't been used on this computer/user account before. Do an initial online update to ensure the
             // user is always on the freshest version and avoid us needing to rebuild the downloadable binaries for
             // every single update.
@@ -372,7 +372,7 @@ public class Main extends Application {
     }
 
     private Node createLoadingUI() {
-        VBox vBox = new VBox(new Label("Crowdfunding app"));
+        VBox vBox = new VBox(new Label("BlackLight"));
         vBox.setPrefWidth(Double.MAX_VALUE);
         vBox.setPrefHeight(Double.MAX_VALUE);
         vBox.setAlignment(Pos.CENTER);

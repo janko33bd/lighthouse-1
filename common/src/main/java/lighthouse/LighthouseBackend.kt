@@ -58,7 +58,7 @@ import kotlin.collections.ArrayList
  * concurrency manageable. A prior approach based on ordinary threading and locking got too complicated.
 
  * LighthouseBackend is used in both the GUI app and on the server. In the server case the wallet will typically be
- * empty and projects/pledges are stored on disk only. Ideally, it's connected to a local Bitcoin Core node.
+ * empty and projects/pledges are stored on disk only. Ideally, it's connected to a local Blackcoin Lore node.
  */
 public class LighthouseBackend public constructor(
         public val mode: LighthouseBackend.Mode,
@@ -142,10 +142,10 @@ public class LighthouseBackend public constructor(
     private val kctx = Kovenant.createContext { workerContext.dispatcher = executor.asDispatcher() }
 
     init {
-        if (params === RegTestParams.get()) {
-            setMinPeersForUTXOQuery(1)
-            setMaxJitterSeconds(1)
-        }
+//        if (params === RegTestParams.get()) {
+//            setMinPeersForUTXOQuery(1)
+//            setMaxJitterSeconds(1)
+//        }
 
         val startupTime = System.nanoTime()
 
@@ -495,10 +495,10 @@ public class LighthouseBackend public constructor(
             } else {
                 log.info("Checking ${pledges.size} pledge(s) against P2P network for '$project'")
                 markAsInProgress(project)
-                val peerFuture = bitcoin.xtPeers.waitForPeersOfVersion(minPeersForUTXOQuery, GetUTXOsMessage.MIN_PROTOCOL_VERSION.toLong())
+                val peerFuture = bitcoin.peers.waitForPeersOfVersion(minPeersForUTXOQuery, GetUTXOsMessage.MIN_PROTOCOL_VERSION.toLong())
                 if (!peerFuture.isDone) {
                     log.info("Waiting to find {} peers that support getutxo", minPeersForUTXOQuery)
-                    for (peer in bitcoin.xtPeers.connectedPeers) log.info("Connected to: {}", peer)
+                    for (peer in bitcoin.peers.connectedPeers) log.info("Connected to: {}", peer)
                 }
                 Futures.addCallback(peerFuture, object : FutureCallback<List<Peer>> {
                     override fun onSuccess(allPeers: List<Peer>?) {
@@ -598,7 +598,6 @@ public class LighthouseBackend public constructor(
             }
             log.info("{} of {} pledges verified (were not revoked/claimed)", verifiedPledges.size, pledges.size)
             syncPledges(project, pledges, verifiedPledges)
-            refreshBloomFilter()
             markAsCheckDone(project)
             result.complete(HashSet(verifiedPledges))
         } catch (e: InterruptedException) {
@@ -1102,10 +1101,6 @@ public class LighthouseBackend public constructor(
         }.get()
         executor.service.shutdown()
         executor.service.awaitTermination(10, TimeUnit.SECONDS)
-    }
-
-    public fun refreshBloomFilter() {
-        bitcoin.peers.recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED)
     }
 
     private fun getAllOpenPledgedOutpoints(): Map<TransactionOutPoint, LHProtos.Pledge> {

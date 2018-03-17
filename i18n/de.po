@@ -60,8 +60,8 @@ msgid ""
 msgstr "Das Projekt ist noch nicht auf dem Server: Bitte schicke die Projektdatei an den Serverbetreiber"
 
 msgid ""
-"Bitcoin P2P network returned inconsistent answers, please contact support"
-msgstr "Das Bitcoin P2P Netzwerk kann sich nicht einigen, bitte kontaktiere den Support"
+"Blackcoin P2P network returned inconsistent answers, please contact support"
+msgstr "Das Blackcoin P2P Netzwerk kann sich nicht einigen, bitte kontaktiere den Support"
 
 msgid "Server error: Timed out"
 msgstr "Server Fehler: Zeitüberschreitung"
@@ -130,7 +130,7 @@ msgstr "Exportieren fehlgeschlagen"
 
 #. TRANS: %s = error message
 msgid "Lighthouse was unable to save pledge data to the selected file: %s"
-msgstr "Lighthouse konnte die Zusagen nicht in die angegebene Datei speichern: %s"
+msgstr "Pharos konnte die Zusagen nicht in die angegebene Datei speichern: %s"
 
 msgid "Read more ..."
 msgstr "Mehr lesen ..."
@@ -163,17 +163,17 @@ msgstr "Bereits am laufen"
 msgid "This application is already running and cannot be started twice."
 msgstr "Diese Anwendung ist bereits am laufen und kann nicht zweimal ausgeführt werden."
 
-msgid "Local Bitcoin node not usable"
-msgstr "Lokale Bitcoin node nicht nutzbar"
+msgid "Local Blackcoin node not usable"
+msgstr "Lokale Blackcoin node nicht nutzbar"
 
 #. TRANS: %s = app name
 msgid ""
-"You have a Bitcoin (Core) node running on your computer, but it doesn't have"
+"You have a Blackcoin (Core) node running on your computer, but it doesn't have"
 " the protocol support %s needs. %s will still work but will use the peer to "
 "peer network instead, so you won't get upgraded security. Try installing "
-"Bitcoin XT, which is a modified version of Bitcoin Core that has the "
+"Blackcoin Lore, which is a modified version of Blackcoin Core that has the "
 "upgraded protocol support."
-msgstr "Eine Bitcoin (Core) node läuft auf deinem Computer, aber sie hat nicht die Protokollunterstützung die %s braucht. %s wird trotzdem funktionieren, aber stattdessen das Peer-to-Peer Netzwerk benutzen, deswegen wird die Sicherheit nicht erhöht sein. Versuche Bitcoin XT zu installieren, was eine modifizierte Version von Bitcoin Core mit der verbesserten Protokollunterstützung."
+msgstr "Eine Blackcoin (Core) node läuft auf deinem Computer, aber sie hat nicht die Protokollunterstützung die %s braucht. %s wird trotzdem funktionieren, aber stattdessen das Peer-to-Peer Netzwerk benutzen, deswegen wird die Sicherheit nicht erhöht sein. Versuche Blackcoin Lore zu installieren, was eine modifizierte Version von Blackcoin Core mit der verbesserten Protokollunterstützung."
 
 msgid "View pledge"
 msgstr "Zusage anzeigen"
@@ -224,9 +224,9 @@ msgstr "Projekt bearbeiten"
 
 #. TRANS: %d = maximum number of pledges
 msgid ""
-"You can collect a maximum of %d pledges, due to limits in the Bitcoin "
+"You can collect a maximum of %d pledges, due to limits in the Blackcoin "
 "protocol."
-msgstr "Du kannst maximal %s Zusagen sammeln. Dies ist eine Limitierung des Bitcoin Protokolls."
+msgstr "Du kannst maximal %s Zusagen sammeln. Dies ist eine Limitierung des Blackcoin Protokolls."
 
 msgid "Project name"
 msgstr "Projekt Name"
@@ -396,9 +396,9 @@ msgid "Wallet restore in progress"
 msgstr "Wallet Wiederherstellung im Vorgang"
 
 msgid ""
-"Your wallet will now be resynced from the Bitcoin network. This can take a "
+"Your wallet will now be resynced from the Blackcoin network. This can take a "
 "long time for old wallets."
-msgstr "Deine Wallet wird jetzt nochmals mit dem Bitcoin Netzwerk synchronisiert. Für ältere Wallets kann dies eine lange Zeit in Anspruch nehmen. "
+msgstr "Deine Wallet wird jetzt nochmals mit dem Blackcoin Netzwerk synchronisiert. Für ältere Wallets kann dies eine lange Zeit in Anspruch nehmen. "
 
 msgid "Wallet decrypted"
 msgstr "Wallet entschlüsselt"
@@ -488,8 +488,8 @@ msgstr "Du kannst das Passwort jederzeit in den Einstellungen wieder entfernen."
 
 msgid ""
 "This operation incurs a small miners fee because it requires making a "
-"Bitcoin transaction."
-msgstr "Dieser Vorgang benötigt eine kleine Gebühr für die Miner, weil er eine Bitcoin Transaktion notwendig macht."
+"Blackcoin transaction."
+msgstr "Dieser Vorgang benötigt eine kleine Gebühr für die Miner, weil er eine Blackcoin Transaktion notwendig macht."
 
 msgid "Revoke pledge"
 msgstr "Zusage zurückziehen"
@@ -515,8 +515,8 @@ msgid "Transaction acceptance issue"
 msgstr "Die Transaktion wurde nicht akzeptiert"
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the claim: %s"
-msgstr "Das Bitcoin Netzwerk hat die Transaktion zurückgewiesen: %s"
+msgid "The Blackcoin network has rejected the claim: %s"
+msgstr "Das Blackcoin Netzwerk hat die Transaktion zurückgewiesen: %s"
 
 msgid "Too much money"
 msgstr "Zu viel Geld"
@@ -533,22 +533,22 @@ msgid "Cannot claim pledges"
 msgstr "Die Transaktion konnte nicht ausgeführt werden"
 
 msgid ""
-"Closing the contract requires paying Bitcoin network fees, but you don't "
+"Closing the contract requires paying Blackcoin network fees, but you don't "
 "have enough money in the wallet. Add more money and try again."
-msgstr "Zum Abschluss des Vertrages ist eine Gebühr für das Bitcoin Netzwerk notwendig, aber es ist nicht genug Geld in der Wallet. Schicke etwas mehr Geld dahin und versuche es erneut. "
+msgstr "Zum Abschluss des Vertrages ist eine Gebühr für das Blackcoin Netzwerk notwendig, aber es ist nicht genug Geld in der Wallet. Schicke etwas mehr Geld dahin und versuche es erneut. "
 
 #. TRANS: %s = error message
-msgid "The Bitcoin network has rejected the revocation transaction: %s"
-msgstr "Das Bitcoin Netzwerk hat die Widerruftransaktion zurück gerufen: %s"
+msgid "The Blackcoin network has rejected the revocation transaction: %s"
+msgstr "Das Blackcoin Netzwerk hat die Widerruftransaktion zurück gerufen: %s"
 
 msgid "Cannot revoke pledge"
 msgstr "Das zurückziehen der Spendenzusage ist fehlgeschlagen"
 
 msgid ""
-"Revoking a pledge requires making another Bitcoin transaction on the block "
+"Revoking a pledge requires making another Blackcoin transaction on the block "
 "chain, but you don't have sufficient funds to pay the required fee. Add more"
 " money and try again."
-msgstr "Zum Abschluss des Vertrages ist eine Gebühr für das Bitcoin Netzwerk notwendig, aber es ist nicht genug Geld in der Wallet. Schicke etwas mehr Geld dahin und versuche es erneut. "
+msgstr "Zum Abschluss des Vertrages ist eine Gebühr für das Blackcoin Netzwerk notwendig, aber es ist nicht genug Geld in der Wallet. Schicke etwas mehr Geld dahin und versuche es erneut. "
 
 msgid "Drag to a folder, email or chat window. Or ..."
 msgstr "Ziehe die Datei in einen Ordner, Email oder Chat Fenster. Oder..."
@@ -702,8 +702,8 @@ msgstr "Projekt importieren"
 msgid "You can also drop an existing project file here."
 msgstr "Eine bestehende Projektdatei kann auch hier abgelegt werden "
 
-msgid "Select a bitcoin project file to import"
-msgstr "Bitte eine Bitcoin Projektdatei auswählen"
+msgid "Select a blackcoin project file to import"
+msgstr "Bitte eine Blackcoin Projektdatei auswählen"
 
 msgid "Project/contract files"
 msgstr "Projekt- und Vertragsdateien"
@@ -749,11 +749,11 @@ msgid ""
 "update: %s"
 msgstr "Es trat ein Fehler beim Versuch auf, ein Onlineupdate herunter zu laden oder zu installieren"
 
-msgid "Synchronising with the Bitcoin network"
-msgstr "Synchronisieren mit dem Bitcoin Netzwerk "
+msgid "Synchronising with the Blackcoin network"
+msgstr "Synchronisieren mit dem Blackcoin Netzwerk "
 
-msgid "You don't have any bitcoins in this wallet"
-msgstr "Du hast keine bitcoins in dieser Wallet."
+msgid "You don't have any blackcoins in this wallet"
+msgstr "Du hast keine blackcoins in dieser Wallet."
 
 msgid "Send some money to this address first"
 msgstr "Sende zuerst etwas Geld an diese Adresse"

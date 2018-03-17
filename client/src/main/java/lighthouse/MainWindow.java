@@ -251,7 +251,7 @@ public class MainWindow {
     }
 
     public void showBitcoinSyncMessage() {
-        syncItem = Main.instance.notificationBar.displayNewItem(tr("Synchronising with the Bitcoin network"), bitcoinUIModel.syncProgressProperty());
+        syncItem = Main.instance.notificationBar.displayNewItem(tr("Synchronising with the Blackcoin network"), bitcoinUIModel.syncProgressProperty());
     }
 
     @FXML

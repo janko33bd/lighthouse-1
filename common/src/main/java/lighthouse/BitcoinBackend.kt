@@ -8,17 +8,16 @@ import lighthouse.wallet.PledgingWallet
 import org.bitcoinj.core.*
 import org.bitcoinj.core.listeners.AbstractPeerEventListener
 import org.bitcoinj.core.listeners.PeerDataEventListener
-import org.bitcoinj.kits.WalletAppKit
 import org.bitcoinj.net.discovery.DnsDiscovery
 import org.bitcoinj.net.discovery.HttpDiscovery
 import org.bitcoinj.params.RegTestParams
 import org.bitcoinj.params.UnitTestParams
-import org.bitcoinj.store.BlockStore
 import org.bitcoinj.store.BlockStoreException
-import org.bitcoinj.store.SPVBlockStore
+import org.bitcoinj.store.FullPrunedBlockStore
 import org.bitcoinj.wallet.WalletProtobufSerializer
 import org.bitcoinj.wallet.DeterministicSeed
 import org.bitcoinj.wallet.KeyChainGroup
+import org.blackcoinj.store.LevelDBStoreFullPrunedBlackstore
 import org.slf4j.LoggerFactory
 import java.io.File
 import java.net.InetAddress
@@ -30,10 +29,10 @@ public class ChainFileLockedException : Exception()
 
 interface IBitcoinBackend {
     public val wallet: PledgingWallet
-    public val store: BlockStore
-    public val chain: BlockChain
+    public val store: FullPrunedBlockStore
+    public val chain: FullPrunedBlockChain
     public val peers: PeerGroup
-    public val xtPeers: PeerGroup
+    //public val xtPeers: PeerGroup
 }
 
 /**
@@ -52,11 +51,11 @@ public class BitcoinBackend @Throws(ChainFileLockedException::class) constructor
     private val walletFile: File = AppDirectory.dir().resolve("$appName.wallet").toFile()
 
     public override var wallet: PledgingWallet = createOrLoadWallet(walletFile, walletFile.exists() and !chainFile.exists())
-    public override var store: BlockStore = initializeChainStore(chainFile)
-    public override var chain: BlockChain = BlockChain(context, wallet, store)
+    public override var store: FullPrunedBlockStore = initializeChainStore(chainFile)
+    public override var chain: FullPrunedBlockChain = FullPrunedBlockChain(context, wallet, store)
     public override var peers: PeerGroup = createPeerGroup()
 
-    public override var xtPeers: PeerGroup = createXTPeers()
+    //public override var xtPeers: PeerGroup = createXTPeers()
     public val localNodeUnusable: SimpleBooleanProperty = SimpleBooleanProperty()
     public val offline: SimpleBooleanProperty = SimpleBooleanProperty()
 
@@ -101,21 +100,13 @@ public class BitcoinBackend @Throws(ChainFileLockedException::class) constructor
     private fun createPeerGroup(): PeerGroup {
         val pg = if (!useTor) {
             with(PeerGroup(context, chain)) {
-                if (params === RegTestParams.get()) {
-                    addAddress(PeerAddress(InetAddress.getLocalHost(), RegTestParams.get().port))
-                    addAddress(PeerAddress(InetAddress.getLocalHost(), RegTestParams.get().port + 1))
-                    minBroadcastConnections = 2
-                    useLocalhostPeerWhenPossible = false
-                } else if (params === UnitTestParams.get()) {
-                    // Do nothing
-                } else {
-                    // Main or test network
+                  // Main or test network
                     if (cmdLineRequestedIPs == null)
                         addPeerDiscovery(DnsDiscovery(params))
                     else
                         for (ip in cmdLineRequestedIPs)
                             addAddress(InetAddress.getByName(ip))
-                }
+
                 this
             }
         } else {
@@ -129,20 +120,21 @@ public class BitcoinBackend @Throws(ChainFileLockedException::class) constructor
         return pg
     }
 
-    private fun initializeChainStore(file: File, newSeed: DeterministicSeed? = null): BlockStore {
+    private fun initializeChainStore(file: File, newSeed: DeterministicSeed? = null): FullPrunedBlockStore {
         try {
-            val fileIsNew = !file.exists()
-            val store = SPVBlockStore(params, file)
-            if (fileIsNew) {
-                // We need to checkpoint the new file to speed initial sync.
-                val time = newSeed?.creationTimeSeconds ?: wallet.earliestKeyCreationTime
-                val stream = WalletAppKit::class.java.getResourceAsStream("/" + params.id + ".checkpoints")
-                if (stream != null) {
-                    CheckpointManager.checkpoint(params, stream, store, time)
-                    stream.close()
-                }
-            }
-            return store
+//              if (fileIsNew) {
+//                // We need to checkpoint the new file to speed initial sync.
+//                val time = newSeed?.creationTimeSeconds ?: wallet.earliestKeyCreationTime
+//                val stream = WalletAppKit::class.java.getResourceAsStream("/" + params.id + ".checkpoints")
+//                if (stream != null) {
+//                    CheckpointManager.checkpoint(params, stream, store, time)
+//                    stream.close()
+//                }
+//            }
+            var chainFile = File("forwarding-service.spvchain")
+            val chainPath = chainFile.absolutePath.replace("\\", "/")
+            log.info(chainPath)
+            return LevelDBStoreFullPrunedBlackstore(params, chainPath)
         } catch(e: BlockStoreException) {
             if (e.message?.contains("locked") ?: false)
                 throw ChainFileLockedException()
@@ -204,10 +196,10 @@ public class BitcoinBackend @Throws(ChainFileLockedException::class) constructor
 
         log.info("Starting regular peer group")
         peers.start()
-        if (xtPeers !== peers) {
-            log.info("Starting XT peer group")
-            xtPeers.start()
-        }
+//        if (xtPeers !== peers) {
+//            log.info("Starting XT peer group")
+//            xtPeers.start()
+//        }
         running = true
         log.info("Starting block chain download")
         peers.startBlockChainDownload(downloadListener)
@@ -225,9 +217,9 @@ public class BitcoinBackend @Throws(ChainFileLockedException::class) constructor
         chainFile.delete()
         wallet = createOrLoadWallet(walletFile, true, seed)
         store = initializeChainStore(chainFile, seed)
-        chain = BlockChain(context, wallet, store)
+        chain = FullPrunedBlockChain(context, wallet, store)
         peers = createPeerGroup()
-        xtPeers = createXTPeers()
+        //xtPeers = createXTPeers()
 
         start(downloadListener!!)
     }
@@ -235,8 +227,8 @@ public class BitcoinBackend @Throws(ChainFileLockedException::class) constructor
     public fun stop() {
         if (running) {
             peers.stop()
-            if (peers !== xtPeers)
-                xtPeers.stopAsync()
+//            if (peers !== xtPeers)
+//                xtPeers.stopAsync()
             wallet.saveToFile(walletFile)
         }
         store.close()
